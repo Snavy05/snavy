@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/mainpagestyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>ShoesMainPage</title>
+</head>
+
+<body>
+    <div class="NavBar">
+        <div class="OpenSidebarIcon">
+            <i class="fa fa-bars" aria-hidden="true" style="color: #CAD51D; font-size: 35px; cursor: pointer;"
+                onclick="openNav()"></i>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div id="SearchBar">
+            <i class="fa fa-search" aria-hidden="true" style="color: #6C6C6C;"> <input type="text"
+                    placeholder="Search.." id="SearchBarInput" type="text" name="SearchBarInput"
+                    style="margin-left: 20px; margin-top: 9px;"></i>
+            <ul id="SearchBarList"></ul>
+        </div>
+        <div class="MenAndWomen">
+            <a href="main_page.html" class="Title">Men</a>
+            <a href="#" class="Title" style="padding-left: 10px;">Women</a>
+        </div>
+        <div class="Utilities">
+            <div class="Heart">
+                <h5 class="TopText" style="color: #CAD51D;"><i class="fa fa-heart-o fa-fw" aria-hidden="true"
+                        style="color: #6C6C6C; font-size: 20px;"></i>&nbsp; (2)
+                </h5>
+            </div>
+            <div class="ShoppingCart">
+                <h5 class="TopText" style="color: #CAD51D;"><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"
+                        style="color: #6C6C6C; font-size: 20px; margin-left: 35px;"></i>&nbsp; $250.00</h5>
+            </div>
+        </div>
+        <div class="Profile"></div>
+    </div>
+    <div class="MainDiv">
+        <!-- <div class="Socials">
+            <a href="https://www.instagram.com/nike/" target="_blank" rel="noopener noreferrer"
+                class="SocialTexts">Instagram</a>
+            <a href="https://twitter.com/Nike" target="_blank" rel="noopener noreferrer" class="SocialTexts"
+                style="margin-top: 40px">Twitter</a>
+            <a href="https://www.facebook.com/nike" target="_blank" rel="noopener noreferrer" class="SocialTexts"
+                style="margin-top: 60px">Facebook</a>
+        </div> -->
+
+        <!-- --------------------------------------------------------- -->
+        <div id="AirMaxWrapper">
+            <div id="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">AirMax<sup class="supTM"
+                        style="font-size: 15px;">TM</sup> Collection</h2>
+                <h4 style="font-weight: 500">The design draws inspiration from AirMax<sup class="supTM"
+                        style="font-size: 10px;">TM</sup> icons
+                    <br>
+                    showcasing Nike's greatest innovation
+                    <br>
+                    with its large window and fresh array of colors.</h4>
+                <div id="AirMaxContainer">
+                    <img src="img/airmaxcollectionbanner.jpg" alt="" id="AirMaxCollectionBanner">
+                    <div id="BannerTexts">
+                        <div id="banner1">
+                            <h1 class="h1random">AirMax<sup class="supTM" style="font-size: 15px;">TM</sup></h1>
+                            <a href="#" class="ShoppingButton">Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- --------------------------------------------------------- -->
+
+        <div id="AirMaxWrapper">
+            <div id="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">Tanjun Collection</h2>
+                <h4 style="font-weight: 500">"Tanjun" means "simplicity" in
+                    <br>
+                    Japanese, and the Nike Tanjun Shoe is simplicity at its best.
+                    <br>
+                    It has a modern look and design is convenient and
+                    <br>
+                    comfortable, while a sleek upper gives a clean look and fit.
+                </h4>
+                <div id="AirMaxContainer">
+                    <img src="img/niketanjuncollection.jpg" alt="" id="AirMaxCollectionBanner">
+                    <div id="BannerTexts">
+                        <div id="banner1">
+                            <h1 class="h1random">Tanjun Collection</h1>
+                            <a href="index.html" class="ShoppingButton" style="margin-right: 160px;">Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="AirMaxWrapper">
+            <div class="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">Currently In Stock</h2>
+                <h4 style="font-weight: 500">Check out our current shoes in stocks
+                    <br>
+                    (Changes overtime)
+                </h4>
+                <div id="listDemo"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/mainpagescript.js"></script>
+
+</html>

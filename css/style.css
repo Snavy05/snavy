@@ -1,0 +1,420 @@
+* {
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/859116884921417737/884419848476721232/Background-01.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#SearchBar,
+.MenAndWomen,
+.Utilities {
+    display: flex;
+}
+
+.MenAndWomen {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.Title {
+    font-size: 15px;
+    /* margin-top: 25px; */
+    margin-left: 25px;
+}
+
+#SearchBar {
+    margin-left: -100px;
+    /* margin-top: 40px; */
+}
+
+.OpenSidebarIcon {
+    /* margin-top: 35px; */
+    margin-left: -65px;
+}
+
+#SearchBarInput {
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: white;
+}
+
+.Utilities {
+    margin-top: -15px;
+    margin-right: -105px;
+}
+
+.Profile {
+    width: 50px;
+    height: 50px;
+    border-color: #CAD51D;
+    margin-right: -45px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.Title {
+    color: white;
+    text-decoration: none;
+    font-weight: 750;
+}
+
+.Title:hover {
+    color: #CAD51D;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+/* -------------------------------------------------------------- */
+.ShoesImage {
+    width: 925px;
+    height: 850px;
+    left: 10vh;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 10vh;
+}
+
+.MainDiv {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 250px 45px 200px 45px;
+}
+
+.Socials {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: -400px;
+}
+
+.SocialTexts {
+    transform: rotate(270deg);
+    padding-top: 30px;
+    color: #676767;
+    font-size: 15px;
+    margin-left: 180px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ShoesName {
+    font-family: 'Work Sans', sans-serif;
+    color: white;
+    font-size: 100px;
+    font-weight: 610;
+    margin-right: 850px;
+    margin-top: -50px;
+}
+
+.RightDiv {
+    padding: 0px 0px 0px 1400px;
+    position: absolute;
+}
+
+.Description {
+    color: #9E9E9E;
+    font-weight: 700;
+}
+
+.Reviews{
+    display: flex;
+}
+
+.ReviewContainer:hover {
+    cursor: pointer;
+}
+
+.ColorSelection {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.Color{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: -100px;
+}
+
+.Color:hover {
+    border: 2px solid #CAD51D;
+    cursor: pointer;
+}
+/* ------------------------------------------------------------- */
+.BottomDiv {
+    display: flex;
+    justify-content: space-around;
+    /* padding: 0px ; */
+}
+
+.cart-button {
+	position: relative;
+	padding: 10px;
+	width: 200px;
+	height: 60px;
+	border: 0;
+	border-radius: 30px;
+	background-color: #CAD51D;
+	outline: none;
+	cursor: pointer;
+	color: black;
+	transition: .3s ease-in-out;
+	overflow: hidden;
+    font-weight: 700;
+}
+.cart-button:hover {
+	background-color: #bac51c;
+}
+.cart-button:active {
+	transform: scale(.9);
+}
+
+.cart-button .fa-shopping-cart {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: -10%;
+	font-size: 2em;
+	transform: translate(-50%,-50%);
+}
+.cart-button .fa-archive {
+	position: absolute;
+	z-index: 3;
+	top: -20%;
+	left: 52%;
+	font-size: 1.2em;
+	transform: translate(-50%,-50%);
+}
+.cart-button span {
+	position: absolute;
+	z-index: 3;
+	left: 50%;
+	top: 50%;
+	font-size: 1.2em;
+	color: black;
+	transform: translate(-50%,-50%);
+}
+.cart-button span.add-to-cart {
+	opacity: 1;
+}
+.cart-button span.added {
+	opacity: 0;
+}
+
+.cart-button.clicked .fa-shopping-cart {
+	animation: cart 1.5s ease-in-out forwards;
+}
+.cart-button.clicked .fa-archive {
+	animation: box 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.add-to-cart {
+	animation: txt1 1.5s ease-in-out forwards;
+}
+.cart-button.clicked span.added {
+	animation: txt2 1.5s ease-in-out forwards;
+}
+@keyframes cart {
+	0% {
+		left: -10%;
+	}
+	40%, 60% {
+		left: 50%;
+	}
+	100% {
+		left: 110%;
+	}
+}
+@keyframes box {
+	0%, 40% {
+		top: -20%;
+	}
+	60% {
+		top: 40%;
+		left: 52%;
+	}
+	100% {
+		top: 40%;
+		left: 112%;
+	}
+}
+@keyframes txt1 {
+	0% {
+		opacity: 1;
+	}
+	20%, 100% {
+		opacity: 0;
+	}
+}
+@keyframes txt2 {
+	0%, 80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.LikeButton {
+    height:100px;
+    margin:0 auto;
+    position: relative;
+  }
+  
+.IClass {
+    cursor:pointer;
+    padding:10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 0 15px;
+    color:#aaa;
+    transition:.2s;
+  }
+  
+  .IClass:hover {
+    color:#666;
+  }
+  
+  .IClass:before {
+    font-family:fontawesome;
+    content:'\f004';
+    font-style:normal;
+  }
+  
+  .TextPopup {
+    position: absolute;
+    bottom:70px;
+    left:0;
+    right:0;
+    visibility: hidden;
+    transition:.6s;
+    z-index:-2;
+    font-size:2px;
+    color:transparent;
+    font-weight:400;
+  }
+  
+  .press {
+    animation: size .4s;
+    color:#e23b3b;
+  }
+  
+  .TextPopup.press {
+    bottom:120px;
+    font-size:14px;
+    visibility:visible;
+    animation: fade 1s;
+  }
+  
+  @keyframes fade {
+    0% {color:transparent;}
+    50% {color:e23b3b;}
+    100% {color:transparent;}
+  }
+  
+  @keyframes size {
+    0% {padding:10px 12px 8px;}
+    50% {padding:14px 16px 12px;  
+      margin-top:-4px;}
+    100% {padding:10px 12px 8px;}
+  }
+
+
+
+/* --------------------------------- */
+
+.FunctionButtons{
+    display: flex;
+    margin-right: 80px;
+}
+
+.BotNav {
+    position: absolute;
+    text-align: center;
+}
+
+.fa-circle {
+    color: #6C6C6C;
+    padding: 0px 5px 0px 5px;
+}
+
+.fa-long-arrow-left, .fa-long-arrow-right {
+    color: #6C6C6C;
+}
+
+.fa-long-arrow-left:hover, .fa-long-arrow-right:hover{
+    color: #CAD51D;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.PriceTag {
+    margin-right: 900px;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  
