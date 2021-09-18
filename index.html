@@ -7,19 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mainpagestyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <title>Shoes</title>
+    <title>ShoesMainPage</title>
 </head>
 
 <body>
     <div class="NavBar">
         <div class="OpenSidebarIcon">
-            <i class="fa fa-bars" aria-hidden="true" style="color: #CAD51D; font-size: 35px; cursor: pointer;" onclick="openNav()"></i>
+            <i class="fa fa-bars" aria-hidden="true" style="color: #CAD51D; font-size: 35px; cursor: pointer;"
+                onclick="openNav()"></i>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="#">About</a>
@@ -30,15 +31,12 @@
         </div>
         <div id="SearchBar">
             <i class="fa fa-search" aria-hidden="true" style="color: #6C6C6C;"> <input type="text"
-                    placeholder="Search.." 
-                    id="SearchBarInput" 
-                    type ="text"
-                    name = "SearchBarInput"
+                    placeholder="Search.." id="SearchBarInput" type="text" name="SearchBarInput"
                     style="margin-left: 20px; margin-top: 9px;"></i>
             <ul id="SearchBarList"></ul>
         </div>
         <div class="MenAndWomen">
-            <a href="main_page.html" class="Title">Men</a>
+            <a href="index.html" class="Title">Men</a>
             <a href="#" class="Title" style="padding-left: 10px;">Women</a>
         </div>
         <div class="Utilities">
@@ -54,85 +52,106 @@
         </div>
         <div class="Profile"></div>
     </div>
+    
     <div class="MainDiv">
-        <div class="Socials animate__animated animate__fadeInDownBig">
-            <a href="https://www.instagram.com/nike/" target="_blank" rel="noopener noreferrer" class="SocialTexts">Instagram</a>
-            <a href="https://twitter.com/Nike" target="_blank" rel="noopener noreferrer" class="SocialTexts" style="margin-top: 40px">Twitter</a>
-            <a href="https://www.facebook.com/nike" target="_blank" rel="noopener noreferrer" class="SocialTexts" style="margin-top: 60px">Facebook</a>
-        </div>
-        <div class="ShoesName animate__animated animate__fadeInLeft">
-            Nike
-            <br>
-            Tanjun
-            <br>
-            Men
-        </div>
-        <div>
-            <img src="img/mainImg.png" alt="" class="ShoesImage">
-        </div>
-        <div class="RightDiv animate__animated animate__fadeInRight">
-            <p class="Description" style="line-height: 30px">
-                The Nike Tanjun MEN feature a mesh
-                <br>
-                fabric upper to offer breathability to
-                <br>
-                your feet, a chunky midsole creates
-                <br>
-                underfoot cushioning, whilst the lace
-                <br>
-                fastening and shaped, padded ankle
-                <br>
-                collar provide a secure, locked-in fit.
-            </p>
-            <div class="Reviews animate__animated animate__fadeInRight">
-                <h5 style="color: #CAD51D;" class="ReviewContainer"><i class="fa fa-star-o" style="color: white;"
-                        aria-hidden="true"></i>
-                    <i class="fa fa-star-o" style="color: white;" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" style="color: white;" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" style="color: white;" aria-hidden="true"></i>
-                    <i class="fa fa-star-o" style="color: white; margin-right: 10px;" aria-hidden="true"></i> Reviews
-                </h5>
+        <!-- <div class="Socials">
+            <a href="https://www.instagram.com/nike/" target="_blank" rel="noopener noreferrer"
+                class="SocialTexts">Instagram</a>
+            <a href="https://twitter.com/Nike" target="_blank" rel="noopener noreferrer" class="SocialTexts"
+                style="margin-top: 40px">Twitter</a>
+            <a href="https://www.facebook.com/nike" target="_blank" rel="noopener noreferrer" class="SocialTexts"
+                style="margin-top: 60px">Facebook</a>
+        </div> -->
+
+        <!-- --------------------------------------------------------- -->
+        <div id="AirMaxWrapper">
+            <div id="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">AirMax<sup class="supTM"
+                        style="font-size: 15px;">TM</sup> Collection</h2>
+                <h4 style="font-weight: 500">The design draws inspiration from AirMax<sup class="supTM"
+                        style="font-size: 10px;">TM</sup> icons
+                    <br>
+                    showcasing Nike's greatest innovation
+                    <br>
+                    with its large window and fresh array of colors.</h4>
+                <div id="AirMaxContainer">
+                    <img src="img/airmaxcollectionbanner.jpg" alt="" id="AirMaxCollectionBanner">
+                    <div id="BannerTexts">
+                        <div id="banner1">
+                            <h1 class="h1random">AirMax<sup class="supTM" style="font-size: 15px;">TM</sup></h1>
+                            <a href="#" class="ShoppingButton">Shop</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="ColorSelection animate__animated animate__fadeInRight">
-                <div class="Color" style="background-color: black;"></div>
-                <div class="Color" style="background-color: rgb(221, 221, 221);"></div>
-                <div class="Color" style="background-color: #CAD51D;"></div>
-                <div class="Color" style="background-color: rgb(74, 165, 250);"></div>
+        </div>
+
+        <!-- --------------------------------------------------------- -->
+
+        <div id="AirMaxWrapper">
+            <div id="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">Tanjun Collection</h2>
+                <h4 style="font-weight: 500">Tanjun means "simplicity" in Japanese, and
+                    <br>
+                    the streamlined design of this shoe is simplicity at its best.
+                </h4>
+                <div id="AirMaxContainer">
+                    <img src="img/niketanjuncollection.jpg" alt="" id="AirMaxCollectionBanner">
+                    <div id="BannerTexts">
+                        <div id="banner1">
+                            <h1 class="h1random">Tanjun Collection</h1>
+                            <a href="NikeTanjun.html" class="ShoppingButton" style="margin-right: 160px;">Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="AirMaxWrapper">
+            <div id="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">Explore</h2>
+                <h4 style="font-weight: 500">Vast collection of shoes, for everyone.
+                </h4>
+            </div>
+            <div class="container">
+                <div class="showSlider slide">
+                <img src="img/airmaxcollectionbanner.jpg" alt= "Entering Library" class="BannerCollectionImagegs"/>
+                <div class="contentBook">Placeholder</div>
+                </div>
+                <div class="showSlider slide">
+                <img src="img/niketanjuncollection.jpg" alt = "Select Book" class="BannerCollectionImagegs"/>
+                <div class="contentBook">Placeholder</div>
+                </div>
+                <div class="showSlider slide">
+                <img src="img/airmaxcollectionbanner.jpg" alt="Registering ID" class="BannerCollectionImagegs"/>
+                <div class="contentBook">Placeholder</div>
+                </div>
+                <div class="showSlider slide">
+                <img src="img/niketanjuncollection.jpg" alt= "Returning Book" class="BannerCollectionImagegs"/>
+                <div class="contentBook">Placeholder</div>
+                </div>
+                <!-- Navigation arrows -->
+                <a class="left" onclick="nextSlide(-1)" style="margin-left: -844px;">❮</a>
+                <a class="right" onclick="nextSlide(1)">❯</a>
+                </div>
+        </div>
+
+        
+
+        <div id="AirMaxWrapper">
+            <div class="Titles">
+                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">Currently In Stock</h2>
+                <h4 style="font-weight: 500">Check out our current shoes in stocks
+                    <br>
+                    (Changes overtime)
+                </h4>
+                <div id="listDemo"></div>
             </div>
         </div>
     </div>
-    <div class="BottomDiv">
-        <i class="fa fa-long-arrow-down arrowDown" aria-hidden="true"
-            style="color:#6C6C6C; font-size: 50px; font-weight: 20"></i>
-        <div class="PriceTag">
-            <h3
-                style="color:#6C6C6C; text-decoration: line-through; font-size: 25px; margin-top: -40px; margin-left: 125px;">
-                $250.00</h3>
-            <h1 style="color:#CAD51D; font-size: 55px; margin-top: -20px; ">$200.00</h1>
-        </div>
-        <div class="BotNav">
-            <i class="fa fa-long-arrow-left" aria-hidden="true" style="font-size: 50px;"></i>
-            <i class="fa fa-circle" aria-hidden="true" style="margin-left: 150px; color: #CAD51D;"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true"></i>
-            <i class="fa fa-circle" aria-hidden="true" style="margin-right: 150px;"></i>
-            <i class="fa fa-long-arrow-right" aria-hidden="true" style="font-size: 50px;"></i>
-        </div>
-        <div class="FunctionButtons">
-            <button class="cart-button">
-                <span class="add-to-cart">Add to cart</span>
-                <span class="added">Added</span>
-                <i class="fa fa-shopping-cart"></i>
-                <i class="fa fa-archive"></i>
-            </button>
-            <div class="LikeButton">
-                <i class="IClass"></i>
-                <span class="TextPopup">Liked</span>
-            </div>
-        </div>
-    </div>
-    <div id="listDemo"></div>
+
+    <div id=Footer>@Vũ Đức Minh. All rights reserved.</div>
 </body>
-<script src="js/script.js"></script>
+<script src="js/mainpagescript.js"></script>
 
 </html>
