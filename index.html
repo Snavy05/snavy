@@ -32,11 +32,10 @@
         <div id="SearchBar">
             <i class="fa fa-search" aria-hidden="true" style="color: #6C6C6C;"> <input type="text"
                     placeholder="Search.." id="SearchBarInput" type="text" name="SearchBarInput"
-                    style="margin-left: 20px; margin-top: 9px;"></i>
-            <ul id="SearchBarList"></ul>
+                    style="margin-left: 20px; margin-top: 9px;" onclick="openSearch()"></i>
         </div>
         <div class="MenAndWomen">
-            <a href="index.html" class="Title">Men</a>
+            <a href="index.html" class="Title" style="text-decoration: underline;text-underline-offset: 10px">Men</a>
             <a href="#" class="Title" style="padding-left: 10px;">Women</a>
         </div>
         <div class="Utilities">
@@ -52,7 +51,16 @@
         </div>
         <div class="Profile"></div>
     </div>
-    
+
+    <div id="SearchExpandedWrapper">
+        <div class="SearchExpanded animate__animated animate__fadeInLeft">
+            <h1>Our models</h1>
+            <h4>(Ones that are currently in stock)</h4>
+            <h2 id="CloseButton" onclick="closeSearchBar()">X</h2>
+        </div>
+        <div id="listDemo"></div>
+    </div>
+
     <div class="MainDiv">
         <!-- <div class="Socials">
             <a href="https://www.instagram.com/nike/" target="_blank" rel="noopener noreferrer"
@@ -75,7 +83,9 @@
                     <br>
                     with its large window and fresh array of colors.</h4>
                 <div id="AirMaxContainer">
-                    <img src="img/airmaxcollectionbanner.jpg" alt="" id="AirMaxCollectionBanner">
+                    <a href="">
+                        <img src="img/airmaxcollectionbanner.jpg" alt="" id="AirMaxCollectionBanner">
+                    </a>
                     <div id="BannerTexts">
                         <div id="banner1">
                             <h1 class="h1random">AirMax<sup class="supTM" style="font-size: 15px;">TM</sup></h1>
@@ -96,7 +106,9 @@
                     the streamlined design of this shoe is simplicity at its best.
                 </h4>
                 <div id="AirMaxContainer">
-                    <img src="img/niketanjuncollection.jpg" alt="" id="AirMaxCollectionBanner">
+                    <a href="NikeTanjun.html">
+                        <img src="img/niketanjuncollection.jpg" alt="" id="AirMaxCollectionBanner">
+                    </a>
                     <div id="BannerTexts">
                         <div id="banner1">
                             <h1 class="h1random">Tanjun Collection</h1>
@@ -115,28 +127,29 @@
             </div>
             <div class="container">
                 <div class="showSlider slide">
-                <img src="img/airmaxcollectionbanner.jpg" alt= "Entering Library" class="BannerCollectionImagegs"/>
-                <div class="contentBook">Placeholder</div>
+                    <img src="img/BANNERS/KD14BASKETBALLBANNER.jpg" alt="Entering Library"
+                        class="BannerCollectionImagegs" />
+                    <div class="contentBook">Placeholder</div>
                 </div>
                 <div class="showSlider slide">
-                <img src="img/niketanjuncollection.jpg" alt = "Select Book" class="BannerCollectionImagegs"/>
-                <div class="contentBook">Placeholder</div>
+                    <img src="img/niketanjuncollection.jpg" alt="Select Book" class="BannerCollectionImagegs" />
+                    <div class="contentBook">Placeholder2</div>
                 </div>
                 <div class="showSlider slide">
-                <img src="img/airmaxcollectionbanner.jpg" alt="Registering ID" class="BannerCollectionImagegs"/>
-                <div class="contentBook">Placeholder</div>
+                    <img src="img/airmaxcollectionbanner.jpg" alt="Registering ID" class="BannerCollectionImagegs" />
+                    <div class="contentBook">Placeholder</div>
                 </div>
                 <div class="showSlider slide">
-                <img src="img/niketanjuncollection.jpg" alt= "Returning Book" class="BannerCollectionImagegs"/>
-                <div class="contentBook">Placeholder</div>
+                    <img src="img/niketanjuncollection.jpg" alt="Returning Book" class="BannerCollectionImagegs" />
+                    <div class="contentBook">Placeholder</div>
                 </div>
                 <!-- Navigation arrows -->
                 <a class="left" onclick="nextSlide(-1)" style="margin-left: -844px;">❮</a>
                 <a class="right" onclick="nextSlide(1)">❯</a>
-                </div>
+            </div>
         </div>
 
-        
+
 
         <div id="AirMaxWrapper">
             <div class="Titles">
@@ -145,7 +158,6 @@
                     <br>
                     (Changes overtime)
                 </h4>
-                <div id="listDemo"></div>
             </div>
         </div>
     </div>
@@ -155,3 +167,4 @@
 <script src="js/mainpagescript.js"></script>
 
 </html>
+

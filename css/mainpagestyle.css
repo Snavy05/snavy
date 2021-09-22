@@ -8,7 +8,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  overflow: auto;
   /* overflow: hidden; */
+}
+
+.MainDiv, #Footer{
+  filter: blur(0px);
 }
 
 /* width */
@@ -59,6 +64,7 @@ body {
   /* margin-top: 25px; */
   margin-left: 25px;
 }
+
 
 #SearchBar {
   margin-left: -100px;
@@ -197,14 +203,13 @@ body {
 }
 
 #listDemo {
-  margin: 2900px 0px 0px 250px;
+  margin: 275px 0px 0px 250px;
   /* padding-inline-start: 0; */
   display: grid;
   grid-template-columns: 0.5fr 0.5fr 0.5fr;
-  grid-gap: 20px;
+  grid-gap: 40px;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
 }
@@ -223,11 +228,16 @@ p {
   font-size: 25px;
 }
 
-.SmallShoesInfo h2 {
+.SmallShoesInfo a {
   color: #CAD51D;
-  margin-bottom: 0px;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.SmallShoesInfo {
+  padding: 20px 0px 0px 20px;
 }
 
 #AirMaxWrapper {
@@ -298,7 +308,7 @@ p {
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: black;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -316,13 +326,20 @@ p {
 }
 
 .contentBook {
-  color: #eff5d4;
+  color: #717171;
   font-size: 30px;
   padding: 8px 12px;
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   width: 100%;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.contentBook:hover {
+  color: #3f3f3f;
+
 }
 
 .active {
@@ -339,3 +356,49 @@ p {
   color: white;
   text-align: center;
 }
+
+/* -=-=-=-=-=Search Bar Expanded-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+#SearchExpandedWrapper {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.SearchExpanded {
+  width: 100%;
+  height: 700px;
+  margin-top: 20px;
+  background-color: #4d4d4d;
+  text-align: center;
+  animation-duration: 0.5s;
+}
+
+#CloseButton {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  color: white;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+#CloseButton:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.SearchExpanded h1 {
+  color: white;
+  position: relative;
+  padding-top: 40px;
+}
+
+.SearchExpanded h4 {
+  color: white;
+  position: relative;
+  margin-top: -5px;
+}
+

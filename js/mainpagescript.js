@@ -1,25 +1,42 @@
 var slide_index = 1;
 slidesDisplay(slide_index);
+
 function nextSlide(n) {
-slidesDisplay(slide_index += n);
+    slidesDisplay(slide_index += n);
 }
+
 function currentSlide(n) {
-slidesDisplay(slide_index = n);
+    slidesDisplay(slide_index = n);
 }
+
 function slidesDisplay(n) {
-var i;
-var slides = document.getElementsByClassName("showSlider");
-if (n > slides.length) { slide_index = 1 }
-if (n < 1) { slide_index = slides.length }
-for (i = 0; i < slides.length; i++) {
-slides[i].style.display = "none";
+    var i;
+    var slides = document.getElementsByClassName("showSlider");
+    if (n > slides.length) {
+        slide_index = 1
+    }
+    if (n < 1) {
+        slide_index = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slide_index - 1].style.display = "block";
 }
-slides[slide_index - 1].style.display = "block";
+
+// -------------------------------------------------------------
+function openSearch() {
+    document.getElementById("SearchExpandedWrapper").style.display = "block";
+    document.getElementsByClassName("MainDiv")[0].style.filter = "blur(4px)";
+    document.getElementById("Footer").style.filter = "blur(4px)";
 }
 
+function closeSearchBar() {
+    document.getElementById("SearchExpandedWrapper").style.display = "none";
+    document.getElementsByClassName("MainDiv")[0].style.filter = "blur(0px)";
+}
 
-
-
+// -------------------------------------------------------------
 /* Set the width of the side navigation to 250px */
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -108,6 +125,7 @@ var arrDemo = [{
         title: '1 Color',
         img: './img/Tanjun.png',
         price: '$250',
+        link: 'NikeTanjun.html',
         class: 'animate__fadeInLeft'
     },
 ];
@@ -119,7 +137,7 @@ const displayEle = (arrDemo) => {
         <div class='info animate__animated ${item.class}'>
             <img src="${item.img}" alt="">    
             <div class='SmallShoesInfo'>
-                <h2>${item.name}</h2>
+                <a href="${item.link}">${item.name}</a>
                 <p class='ShoesColor'>${item.title}</p>
                 <p class='ShoesPrice'>${item.price}</p>
             </div>
@@ -156,5 +174,3 @@ const displayHeader = () => {
 displayHeader();
 
 // ----------------------------------------------------------------------------
-
-
