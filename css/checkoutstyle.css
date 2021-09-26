@@ -1,0 +1,507 @@
+* {
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    background-image: url('https://cdn.discordapp.com/attachments/859116884921417737/884419848476721232/Background-01.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* overflow: hidden; */
+  }
+  
+  .MainDiv,
+  #Footer {
+    filter: blur(0px);
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #3f3f3f;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(41, 41, 41);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    transition: 0.5s;
+  }
+  
+  .NavBar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  #SearchBar,
+  .MenAndWomen,
+  .Utilities {
+    display: flex;
+  }
+  
+  .MenAndWomen {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    padding-left: 375px;
+  }
+  
+  .Title {
+    font-size: 15px;
+    /* margin-top: 25px; */
+    margin-left: 25px;
+  }
+  
+  
+  #SearchBar {
+    margin-left: -100px;
+    /* margin-top: 40px; */
+  }
+  
+  .OpenSidebarIcon {
+    /* margin-top: 35px; */
+    margin-left: -65px;
+  }
+  
+  #SearchBarInput {
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: white;
+  }
+  
+  .Utilities {
+    margin-top: -15px;
+    margin-right: -105px;
+  }
+  
+  .Profile {
+    width: 50px;
+    height: 50px;
+    border-color: #CAD51D;
+    margin-right: -45px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .Title {
+    color: white;
+    text-decoration: none;
+    font-weight: 750;
+  }
+  
+  .Title:hover {
+    color: #CAD51D;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  
+  /* -------------------------------------------------------------- */
+  .MainDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Socials {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    margin-top: 300px;
+    margin-left: 30px;
+  }
+  
+  .SocialTexts {
+    transform: rotate(270deg);
+    padding-top: 30px;
+    color: #676767;
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
+  
+  /* --------------------------------- */
+  
+  
+  
+  /* The side navigation menu */
+  .sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  
+  .info {
+    width: 300px;
+    height: 150px;
+    background-color: rgb(26, 26, 26);
+    color: #6C6C6C;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: rgb(212, 219, 114) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+  
+  #listDemo {
+    margin: 275px 0px 0px 250px;
+    /* padding-inline-start: 0; */
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-gap: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .info img {
+    width: 125px;
+    height: 125px;
+  }
+  
+  p {
+    margin: 0px;
+  }
+  
+  .ShoesPrice {
+    font-weight: 800;
+    font-size: 25px;
+  }
+  
+  .SmallShoesInfo a {
+    color: #CAD51D;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .SmallShoesInfo {
+    padding: 20px 0px 0px 20px;
+  }
+  
+  #AirMaxWrapper {
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+  }
+  
+  #AirMaxCollectionBanner {
+    width: 1688px;
+    height: auto;
+  }
+  
+  #AirMaxContainer {
+    position: relative;
+    text-align: center;
+  }
+  
+  #banner1 {
+    position: absolute;
+    bottom: 15px;
+    left: 135px;
+  }
+  
+  .ShoppingButton {
+    background-color: #fdfdfd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    border-radius: 25px;
+    margin-left: -140px;
+    margin-bottom: 20px;
+  }
+  
+  .ShoppingButton:hover {
+    background-color: #e4e4e4;
+    transition: 0.4s;
+  }
+  
+  /* ---------------------------------------- */
+  .showSlider {
+    display: none
+  }
+  
+  .showSlider img {
+    width: 100%;
+  }
+  
+  .container {
+    max-width: 1688px;
+    position: relative;
+    margin: auto;
+  }
+  
+  .left,
+  .right {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .right {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .left:hover,
+  .right:hover {
+    background-color: rgba(115, 115, 115, 0.8);
+  }
+  
+  .contentBook {
+    color: #717171;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .contentBook:hover {
+    color: #3f3f3f;
+  
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  #Footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    background-color: rgb(15, 15, 15);
+    color: white;
+    text-align: center;
+  }
+  
+  /* -=-=-=-=-=Search Bar Expanded-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+  #SearchExpandedWrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .SearchExpanded {
+    width: 100%;
+    height: 700px;
+    margin-top: 20px;
+    background-color: #4d4d4d;
+    text-align: center;
+    animation-duration: 0.5s;
+  }
+  
+  #CloseButton {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+  
+  #CloseButton:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  
+  .SearchExpanded h1 {
+    color: white;
+    position: relative;
+    padding-top: 40px;
+  }
+  
+  .SearchExpanded h4 {
+    color: white;
+    position: relative;
+    margin-top: -5px;
+  }
+  
+  #FooterNew {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    background-color: #3f3f3f;
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+/* --------------------------------------------------------------- */
+  .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .col-25 {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+  }
+  
+  .col-50 {
+    -ms-flex: 50%; /* IE10 */
+    flex: 50%;
+  }
+  
+  .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 75%;
+  }
+  
+  .col-25,
+  .col-50,
+  .col-75 {
+    padding: 0 16px;
+  }
+  
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    width: 450px;
+    height: auto;
+  }
+  
+  input[type=text] {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline-color: #CAD51D;
+    outline-width: 3px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .btn {
+    background-color: #CAD51D;
+    color: #6C6C6C;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .btn:hover {
+    background-color: #b4bf1b;
+    transition: 5s;
+    -webkit-transition: ease-in-out;
+  }
+  
+  span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+  @media (max-width: 800px) {
+    .row {
+      flex-direction: column-reverse;
+    }
+    .col-25 {
+      margin-bottom: 20px;
+    }
+  }

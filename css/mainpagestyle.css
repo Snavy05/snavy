@@ -8,11 +8,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  overflow: auto;
   /* overflow: hidden; */
 }
 
-.MainDiv, #Footer{
+.MainDiv,
+#Footer {
   filter: blur(0px);
 }
 
@@ -276,7 +276,7 @@ p {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   border-radius: 25px;
-  margin-left: -60px;
+  margin-left: -140px;
   margin-bottom: 20px;
 }
 
@@ -402,3 +402,13 @@ p {
   margin-top: -5px;
 }
 
+#FooterNew {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+  background-color: #3f3f3f;
+  width: 100%;
+  right: 0;
+  left: 0;
+}
