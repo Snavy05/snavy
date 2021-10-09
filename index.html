@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="css/mainpagestyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,33 +24,60 @@
                 onclick="openNav()"></i>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
-                <a href="#">Contact</a>
+                <a href="index.html">
+                    <ion-icon name="home-outline"></ion-icon> Home
+                </a>
+                <a href="allproducts.html">
+                    <ion-icon name="bag-handle-outline"></ion-icon> Products
+                </a>
+                <a href="#">
+                    <ion-icon name="information-outline"></ion-icon> About
+                </a>
+                <a href="#">
+                    <ion-icon name="storefront-outline"></ion-icon> Branding
+                </a>
+                <a href="#">
+                    <ion-icon name="help-outline"></ion-icon> Help
+                </a>
             </div>
         </div>
-        <div id="SearchBar">
+
+        <!-- <div id="SearchBar">
             <i class="fa fa-search" aria-hidden="true" style="color: #6C6C6C;"> <input type="text"
                     placeholder="Search.." id="SearchBarInput" type="text" name="SearchBarInput"
                     style="margin-left: 20px; margin-top: 9px;" onclick="openSearch()"></i>
+        </div> -->
+
+        <div class="search-box">
+            <div id="SearchBar">
+                <input type="text" placeholder="Type to search..">
+            </div>
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cancel-icon">
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="search-data">
+            </div>
         </div>
+
         <div class="MenAndWomen">
             <a href="index.html" class="Title" style="text-decoration: underline;text-underline-offset: 10px">Men</a>
             <a href="index2.html" class="Title" style="padding-left: 10px;">Women</a>
         </div>
         <div class="Utilities">
-            <div class="Heart">
-                <h5 class="TopText" style="color: #CAD51D;"><a href=""
-                        style="text-decoration: none; color: #CAD51D;"><i class="fa fa-heart-o fa-fw"
-                        aria-hidden="true" style="color: #6C6C6C; font-size: 20px;"></i>&nbsp; (2)
+            <!-- <div class="Heart">
+                <h5 class="TopText" style="color: #CAD51D;"><a href="" style="text-decoration: none; color: #CAD51D;"><i
+                            class="fa fa-heart-o fa-fw" aria-hidden="true"
+                            style="color: #6C6C6C; font-size: 20px;"></i>&nbsp; (2)
                 </h5>
                 </a>
-            </div>
+            </div> -->
             <div class="ShoppingCart">
-                <h5 class="TopText" style="color: #CAD51D;"><a href="Checkout.html" style="text-decoration: none; color: #CAD51D;"><i
-                            class="fa fa-shopping-cart fa-fw" aria-hidden="true"
-                            style="color: #6C6C6C; font-size: 20px; margin-left: 35px;"></i>&nbsp;
+                <h5 class="TopText" style="color: #CAD51D;"><a href="Checkout.html"
+                        style="text-decoration: none; color: #CAD51D;"><i class="fa fa-shopping-cart fa-fw"
+                            aria-hidden="true" style="color: #6C6C6C; font-size: 20px; margin-left: 35px;"></i>&nbsp;
                         $250.00</h5>
                 </a>
             </div>
@@ -67,15 +95,6 @@
     </div>
 
     <div class="MainDiv">
-        <!-- <div class="Socials">
-            <a href="https://www.instagram.com/nike/" target="_blank" rel="noopener noreferrer"
-                class="SocialTexts">Instagram</a>
-            <a href="https://twitter.com/Nike" target="_blank" rel="noopener noreferrer" class="SocialTexts"
-                style="margin-top: 40px">Twitter</a>
-            <a href="https://www.facebook.com/nike" target="_blank" rel="noopener noreferrer" class="SocialTexts"
-                style="margin-top: 60px">Facebook</a>
-        </div> -->
-
         <!-- --------------------------------------------------------- -->
         <div id="AirMaxWrapper">
             <div id="Titles">
@@ -153,22 +172,78 @@
                 <a class="right" onclick="nextSlide(1)">❯</a>
             </div>
         </div>
-
-
-
-        <div id="AirMaxWrapper">
-            <div class="Titles">
-                <h2 style="font-weight: 800; font-size: 35px;margin: 0;">Currently In Stock</h2>
-                <h4 style="font-weight: 500">Check out our current shoes in stocks
-                    <br>
-                    (Changes overtime)
-                </h4>
-            </div>
-        </div>
     </div>
 
-    <div id=Footer>@Vũ Đức Minh. All rights reserved.</div>
+
+    <!-- <div id=Footer>@Vũ Đức Minh. All rights reserved.</div> -->
+
+    <footer class="footer" style="margin-top: 30px;">
+        <div class="container_footer">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">shipping</a></li>
+                        <li><a href="#">returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="allproducts.html">shoes</a></li>
+                        <li><a href="allproducts.html">all products</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <ul>
+                        <h4>follow us</h4>
+                        <li><a href="https://twitter.com/Nike" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/nike/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4 style="color: rgb(102, 102, 102); text-align: center; padding: 100px 0px 0px 0px; font-weight: 500; opacity: 0.5;"><i class="fa fa-copyright" aria-hidden="true"></i>
+                 Copyright Vũ Đức Minh. Do not
+                recreate.</h4>
+        </div>
+    </footer>
+
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    const searchBox = document.querySelector(".search-box");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const searchInput = document.querySelector("input");
+    const searchData = document.querySelector(".search-data");
+    searchBtn.onclick = () => {
+        searchBox.classList.add("active");
+        searchBtn.classList.add("active");
+        searchInput.classList.add("active");
+        cancelBtn.classList.add("active");
+        searchInput.focus();
+    }
+    cancelBtn.onclick = () => {
+        searchBox.classList.remove("active");
+        searchBtn.classList.remove("active");
+        searchInput.classList.remove("active");
+        cancelBtn.classList.remove("active");
+        searchData.classList.toggle("active");
+        searchInput.value = "";
+    }
+</script>
 <script src="js/mainpagescript.js"></script>
 
 </html>

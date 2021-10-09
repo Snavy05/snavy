@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url('https://cdn.discordapp.com/attachments/859116884921417737/884419848476721232/Background-01.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+
+.MainDiv
+ {
+    filter: blur(0px);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #3f3f3f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(41, 41, 41);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    transition: 0.5s;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: auto;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .MenAndWomen,
+  .Utilities {
+    display: flex;
+  }
+  
+  .MenAndWomen {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .Title {
+    font-size: 15px;
+    /* margin-top: 25px; */
+    margin-left: 25px;
+  }
+  
+
+  .OpenSidebarIcon {
+    /* margin-top: 35px; */
+    margin-left: -65px;
+  }
+  
+  #SearchBarInput {
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: white;
+  }
+  
+  .Utilities {
+    margin-top: -15px;
+    margin-right: -105px;
+  }
+  
+  .Profile {
+    width: 50px;
+    height: 50px;
+    border-color: #CAD51D;
+    margin-right: -45px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .Title {
+    color: white;
+    text-decoration: none;
+    font-weight: 750;
+  }
+  
+  .Title:hover {
+    color: #CAD51D;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+
+/* --------------------------------- */
+
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+
+/* ------------------------------------------------------- */
+
+
+.container_1 {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 120px;
+}
+
+.container_1 .card {
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.container_1 .card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #CAD51D;
+    clip-path: circle(110px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.container_1 .card:hover:before {
+    clip-path: circle(150px at 80% 20%);
+}
+
+.container_1 .card:after {
+    content: 'Nike';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.container_1 .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.container_1 .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.container_1 .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+}
+
+.container_1 .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.container_1 .card:hover .contentBx {
+    height: 210px;
+
+}
+
+.container_1 .card .contentBx h2 {
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.container_1 .card .contentBx .size,
+.container_1 .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container_1 .card:hover .contentBx .size {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+}
+
+.container_1 .card:hover .contentBx .color {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container_1 .card .contentBx .size h3,
+.container_1 .card .contentBx .color h3 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+
+.container_1 .card .contentBx .size span {
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: 0.5s;
+    color: #111;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container_1 .card .contentBx .size span:hover {
+    background: #9bdc28;
+}
+
+.container_1 .card .contentBx .color span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* .container_1 .card .contentBx .color span:nth-child(2) {
+    background: #9bdc28;
+}
+
+.container_1 .card .contentBx .color span:nth-child(3) {
+    background: #03a9f4;
+}
+
+.container_1 .card .contentBx .color span:nth-child(4) {
+    background: #e91e63;
+} */
+
+.container_1 .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.5s;
+}
+
+.container_1 .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
+
+/* -------------------------------------------------- */
+
+.heading {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 65px;
+}
+/* ---------------------------------------- */
+::selection {
+  color: #fff;
+  background: #664AFF;
+}
+
+.search-box {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box.active {
+  width: 350px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.active {
+  opacity: 1;
+}
+
+.search-box input::placeholder {
+  color: #a6a6a6;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #252525;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: #CAD51D;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-icon:hover {
+  background: #313131;
+}
+
+.search-box .search-icon.active {
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: #CAD51D;
+  color: black;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .cancel-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .cancel-icon.active {
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.search-box .search-data.active {
+  display: none;
+}
+
+#SearchBar {
+  width: 350px;
+  height: 65px;
+}
+
+

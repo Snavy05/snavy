@@ -90,14 +90,15 @@ body {
 
 /* -------------------------------------------------------------- */
 .ShoesImage {
-    width: 925px;
-    height: 850px;
+    width: 95vh;
+    height: 70vh;
     left: 10vh;
     margin: auto;
     position: absolute;
     right: 0;
     text-align: center;
     top: 10vh;
+    
 }
 
 .MainDiv {

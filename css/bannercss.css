@@ -1,24 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #131313;
-}
 
-.container {
+.container_1 {
     position: relative;
 }
 
-.container .card {
+.container_1 .card {
     position: relative;
     width: 320px;
     height: 450px;
@@ -27,7 +15,7 @@ body {
     overflow: hidden;
 }
 
-.container .card:before {
+.container_1 .card:before {
     content: '';
     position: absolute;
     top: 0;
@@ -39,11 +27,11 @@ body {
     transition: 0.5s ease-in-out;
 }
 
-.container .card:hover:before {
+.container_1 .card:hover:before {
     clip-path: circle(150px at 80% 20%);
 }
 
-.container .card:after {
+.container_1 .card:after {
     content: 'Nike';
     position: absolute;
     top: 30%;
@@ -54,7 +42,7 @@ body {
     color: rgba(255, 255, 255, 0.04);
 }
 
-.container .card .imgBx {
+.container_1 .card .imgBx {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -64,12 +52,12 @@ body {
     transition: 0.5s;
 }
 
-.container .card:hover .imgBx {
+.container_1 .card:hover .imgBx {
     top: 0%;
     transform: translateY(0%);
 }
 
-.container .card .imgBx img {
+.container_1 .card .imgBx img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -77,7 +65,7 @@ body {
     width: 270px;
 }
 
-.container .card .contentBx {
+.container_1 .card .contentBx {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -87,20 +75,20 @@ body {
     z-index: 10;
 }
 
-.container .card:hover .contentBx {
+.container_1 .card:hover .contentBx {
     height: 210px;
 
 }
 
-.container .card .contentBx h2 {
+.container_1 .card .contentBx h2 {
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
     color: #fff;
 }
 
-.container .card .contentBx .size,
-.container .card .contentBx .color {
+.container_1 .card .contentBx .size,
+.container_1 .card .contentBx .color {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,20 +98,20 @@ body {
     visibility: hidden;
 }
 
-.container .card:hover .contentBx .size {
+.container_1 .card:hover .contentBx .size {
     opacity: 1;
     visibility: visible;
     transition-delay: 0.5s;
 }
 
-.container .card:hover .contentBx .color {
+.container_1 .card:hover .contentBx .color {
     opacity: 1;
     visibility: visible;
     transition-delay: 0.6s;
 }
 
-.container .card .contentBx .size h3,
-.container .card .contentBx .color h3 {
+.container_1 .card .contentBx .size h3,
+.container_1 .card .contentBx .color h3 {
     color: #fff;
     font-weight: 300;
     font-size: 14px;
@@ -133,7 +121,7 @@ body {
 }
 
 
-.container .card .contentBx .size span {
+.container_1 .card .contentBx .size span {
     width: 26px;
     height: 26px;
     text-align: center;
@@ -149,11 +137,11 @@ body {
     cursor: pointer;
 }
 
-.container .card .contentBx .size span:hover {
+.container_1 .card .contentBx .size span:hover {
     background: #9bdc28;
 }
 
-.container .card .contentBx .color span {
+.container_1 .card .contentBx .color span {
     width: 20px;
     height: 20px;
     background: #ff0;
@@ -162,19 +150,19 @@ body {
     cursor: pointer;
 }
 
-.container .card .contentBx .color span:nth-child(2) {
+.container_1 .card .contentBx .color span:nth-child(2) {
     background: #9bdc28;
 }
 
-.container .card .contentBx .color span:nth-child(3) {
+.container_1 .card .contentBx .color span:nth-child(3) {
     background: #03a9f4;
 }
 
-.container .card .contentBx .color span:nth-child(4) {
+.container_1 .card .contentBx .color span:nth-child(4) {
     background: #e91e63;
 }
 
-.container .card .contentBx a {
+.container_1 .card .contentBx a {
     display: inline-block;
     padding: 10px 20px;
     background: #fff;
@@ -188,7 +176,7 @@ body {
     transition: 0.5s;
 }
 
-.container .card:hover .contentBx a {
+.container_1 .card:hover .contentBx a {
     opacity: 1;
     transform: translateY(0px);
     transition-delay: 0.75s;

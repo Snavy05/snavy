@@ -11,10 +11,10 @@ body {
   /* overflow: hidden; */
 }
 
-.MainDiv,
+/* .MainDiv,
 #Footer {
   filter: blur(0px);
-}
+} */
 
 /* width */
 ::-webkit-scrollbar {
@@ -142,47 +142,64 @@ body {
 
 /* --------------------------------- */
 
-
-
-/* The side navigation menu */
 .sidenav {
   height: 100%;
-  /* 100% Full-height */
   width: 0;
-  /* 0 width - change this with JavaScript */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Stay on top */
   top: 0;
-  /* Stay at the top */
   left: 0;
   background-color: #111;
-  /* Black*/
   overflow-x: hidden;
-  /* Disable horizontal scroll */
   padding-top: 60px;
-  /* Place content 60px from the top */
   transition: 0.5s;
-  /* 0.5 second transition effect to slide in the sidenav */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-/* The navigation menu links */
-.sidenav a {
+
+.sidenav a:nth-child(1) {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #CAD51D;
+  display: block;
+  padding: 0px 10px 20px 0px;
+  transition: 0.3s;
+}
+
+.sidenav a:nth-child(2),
+a:nth-child(3),
+a:nth-child(4),
+a:nth-child(5),
+a:nth-child(6) {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
+  border-radius: 10px;
+  width: 20vh;
+  height: 40px;
+  margin-left: 7px;
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
+
+.sidenav a:hover:nth-child(2),
+a:hover:nth-child(3),
+a:hover:nth-child(4),
+a:hover:nth-child(5),
+a:hover:nth-child(6) {
+  background-color: white;
+  color: black;
+  text-shadow: 1px 1px #9b9a9a;
 }
 
-/* Position and style the close button (top right corner) */
+.sidenav a {
+  margin-top: 20px;
+}
+
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -191,6 +208,7 @@ body {
   margin-left: 50px;
 }
 
+/* ------------------------------------------------------------ */
 
 .info {
   width: 300px;
@@ -342,11 +360,8 @@ p {
 
 }
 
-.active {
-  background-color: #717171;
-}
 
-#Footer {
+/* #Footer {
   position: fixed;
   left: 0px;
   bottom: 0px;
@@ -355,7 +370,7 @@ p {
   background-color: rgb(15, 15, 15);
   color: white;
   text-align: center;
-}
+} */
 
 /* -=-=-=-=-=Search Bar Expanded-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
 #SearchExpandedWrapper {
@@ -402,7 +417,7 @@ p {
   margin-top: -5px;
 }
 
-#FooterNew {
+/* #FooterNew {
   text-align: center;
   justify-content: center;
   display: flex;
@@ -411,4 +426,217 @@ p {
   width: 100%;
   right: 0;
   left: 0;
+} */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+::selection {
+  color: #fff;
+  background: #664AFF;
+}
+
+.search-box {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box.active {
+  width: 350px;
+}
+
+.search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.active {
+  opacity: 1;
+}
+
+.search-box input::placeholder {
+  color: #a6a6a6;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #252525;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: #CAD51D;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-icon:hover {
+  background: #313131;
+}
+
+.search-box .search-icon.active {
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: #CAD51D;
+  color: black;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .cancel-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .cancel-icon.active {
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+
+.search-box .search-data.active {
+  display: none;
+}
+
+#SearchBar {
+  width: 350px;
+  height: 65px;
+}
+
+/* ------ footer ------------------------------------------------------ */
+.container_footer {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #CAD51D;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(68, 53, 53, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+.footer {
+  height: 30vh;
 }

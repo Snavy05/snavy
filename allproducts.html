@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/allproducts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>All Products</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="NavBar">
+            <div class="OpenSidebarIcon">
+                <i class="fa fa-bars" aria-hidden="true" style="color: #CAD51D; font-size: 35px; cursor: pointer;"
+                    onclick="openNav()"></i>
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#">About</a>
+                    <a href="#">Services</a>
+                    <a href="#">Clients</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <div id="SearchBar">
+                    <input type="text" placeholder="Type to search..">
+                </div>
+                <div class="search-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="cancel-icon">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <div class="search-data">
+                </div>
+            </div>
+
+            <div class="MenAndWomen">
+                <a href="index.html" class="Title"
+                    style="text-decoration: underline;text-underline-offset: 10px">Men</a>
+                <a href="index2.html" class="Title" style="padding-left: 10px;">Women</a>
+            </div>
+            <div class="Utilities">
+                <div class="Heart">
+                    <h5 class="TopText" style="color: #CAD51D;"><a href=""
+                            style="text-decoration: none; color: #CAD51D;"><i class="fa fa-heart-o fa-fw"
+                                aria-hidden="true" style="color: #6C6C6C; font-size: 20px;"></i>&nbsp; (2)
+                    </h5>
+                    </a>
+                </div>
+                <div class="ShoppingCart">
+                    <h5 class="TopText" style="color: #CAD51D;"><a href=""
+                            style="text-decoration: none; color: #CAD51D;"><i class="fa fa-shopping-cart fa-fw"
+                                aria-hidden="true"
+                                style="color: #6C6C6C; font-size: 20px; margin-left: 35px;"></i>&nbsp;
+                            $250.00</h5>
+                    </a>
+                </div>
+            </div>
+            <div class="Profile"></div>
+        </div>
+
+
+        <div id="bodyDiv">
+            <div class="heading animate__animated animate__fadeInDown">
+                <h2>All Products</h2>
+                <h5>Check out our line of products, designed with comfort and details built in mind.</h5>
+            </div>
+
+            <div class="container">
+                <div class="row" id="listDemo">
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+    <script>
+        const searchBox = document.querySelector(".search-box");
+        const searchBtn = document.querySelector(".search-icon");
+        const cancelBtn = document.querySelector(".cancel-icon");
+        const searchInput = document.querySelector("input");
+        const searchData = document.querySelector(".search-data");
+        searchBtn.onclick = () => {
+            searchBox.classList.add("active");
+            searchBtn.classList.add("active");
+            searchInput.classList.add("active");
+            cancelBtn.classList.add("active");
+            searchInput.focus();
+        }
+        cancelBtn.onclick = () => {
+            searchBox.classList.remove("active");
+            searchBtn.classList.remove("active");
+            searchInput.classList.remove("active");
+            cancelBtn.classList.remove("active");
+            searchData.classList.toggle("active");
+            searchInput.value = "";
+        }
+    </script>
+    <script src="js/allproductsscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+
+</html>
