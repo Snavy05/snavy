@@ -61,26 +61,14 @@
             <a href="#" class="Title"
                 style="padding-left: 10px;text-decoration: underline;text-underline-offset: 10px">Women</a>
         </div>
-        <div class="Utilities">
-            <div class="ShoppingCart">
-                <h5 class="TopText" style="color: #CAD51D;"><a href=""
-                        style="text-decoration: none; color: #CAD51D;"></a><i class="fa fa-shopping-cart fa-fw"
-                        aria-hidden="true" style="color: #6C6C6C; font-size: 20px; margin-left: 35px;"></i>&nbsp;
-                    $250.00</h5>
-                </a>
-            </div>
+        
+        <div id="CartButton">
+            <a href="Checkout.html" id="cart_icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
         <div class="Profile"></div>
     </div>
 
-    <div id="SearchExpandedWrapper">
-        <div class="SearchExpanded animate__animated animate__fadeInLeft">
-            <h1>Our models</h1>
-            <h4>(Ones that are currently in stock)</h4>
-            <h2 id="CloseButton" onclick="closeSearchBar()">X</h2>
-        </div>
-        <div id="listDemo"></div>
-    </div>
+
 
     <div class="MainDiv">
 
@@ -94,9 +82,8 @@
                         <img src="img/Women's Banner/FleeceBanner.jpg" alt="" id="AirMaxCollectionBanner">
                     </a>
                     <div id="BannerTexts">
-                        <div id="banner1">
+                        <div id="banner1" style = "padding-left: 105px;">
                             <h1 class="h1random" style="margin-left: -105px;">Fleece.</h1>
-                            <h4 style="margin-top: -20px">for everyone, everywhere.</h4>
                             <a href="#" class="ShoppingButton">Shop</a>
                         </div>
                     </div>
@@ -163,8 +150,28 @@
                     <div class="contentBook">Air Huarache</div>
                 </div>
                 <!-- Navigation arrows -->
-                <a class="left" onclick="nextSlide(-1)" style="margin-left: -844px;">❮</a>
-                <a class="right" onclick="nextSlide(1)">❯</a>
+                <a class="left" onclick="nextSlide(-1)" style="cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;">❮</a>
+                <a class="right" onclick="nextSlide(1)" style="cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;">❯</a>
             </div>
         </div>
         <div id="push"></div>

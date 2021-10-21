@@ -96,10 +96,20 @@ body {
   height: 50px;
   border-color: #CAD51D;
   margin-right: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
   background-color: rgba(0, 0, 0, 0);
+}
+
+#logoProfile {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: 0 auto;
 }
 
 .Title {
@@ -179,7 +189,7 @@ a:nth-child(6) {
   color: #818181;
   display: block;
   border-radius: 10px;
-  width: 20vh;
+  width: 19vh;
   height: 40px;
   margin-left: 7px;
   transition: 0.3s;
@@ -303,6 +313,28 @@ p {
   transition: 0.4s;
 }
 
+
+#cart_icon {
+  right: 25%;
+  top: 8%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #252525;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: #CAD51D;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#cart_icon:hover {
+  background: #313131;
+}
+
 /* ---------------------------------------- */
 .showSlider {
   display: none
@@ -318,7 +350,7 @@ p {
   margin: auto;
 }
 
-.left,
+/* .left,
 .right {
   cursor: pointer;
   position: absolute;
@@ -331,7 +363,7 @@ p {
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
-}
+} */
 
 .right {
   right: 0;
@@ -340,7 +372,8 @@ p {
 
 .left:hover,
 .right:hover {
-  background-color: rgba(115, 115, 115, 0.8);
+  background-color: rgba(71, 71, 71, 0.8);
+  background: #24262b;
 }
 
 .contentBook {
@@ -360,73 +393,6 @@ p {
 
 }
 
-
-/* #Footer {
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  right: 0px;
-  width: 100%;
-  background-color: rgb(15, 15, 15);
-  color: white;
-  text-align: center;
-} */
-
-/* -=-=-=-=-=Search Bar Expanded-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
-#SearchExpandedWrapper {
-  display: none;
-  align-items: center;
-  justify-content: center;
-}
-
-.SearchExpanded {
-  width: 100%;
-  height: 700px;
-  margin-top: 20px;
-  background-color: #4d4d4d;
-  text-align: center;
-  animation-duration: 0.5s;
-}
-
-#CloseButton {
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  text-align: center;
-  width: 50px;
-  height: 50px;
-  color: white;
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-#CloseButton:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.SearchExpanded h1 {
-  color: white;
-  position: relative;
-  padding-top: 40px;
-}
-
-.SearchExpanded h4 {
-  color: white;
-  position: relative;
-  margin-top: -5px;
-}
-
-/* #FooterNew {
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  color: white;
-  background-color: #3f3f3f;
-  width: 100%;
-  right: 0;
-  left: 0;
-} */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 ::selection {
   color: #fff;

@@ -66,33 +66,16 @@
             <a href="index.html" class="Title" style="text-decoration: underline;text-underline-offset: 10px">Men</a>
             <a href="index2.html" class="Title" style="padding-left: 10px;">Women</a>
         </div>
-        <div class="Utilities">
-            <!-- <div class="Heart">
-                <h5 class="TopText" style="color: #CAD51D;"><a href="" style="text-decoration: none; color: #CAD51D;"><i
-                            class="fa fa-heart-o fa-fw" aria-hidden="true"
-                            style="color: #6C6C6C; font-size: 20px;"></i>&nbsp; (2)
-                </h5>
-                </a>
-            </div> -->
-            <div class="ShoppingCart">
-                <h5 class="TopText" style="color: #CAD51D;"><a href="Checkout.html"
-                        style="text-decoration: none; color: #CAD51D;"><i class="fa fa-shopping-cart fa-fw"
-                            aria-hidden="true" style="color: #6C6C6C; font-size: 20px; margin-left: 35px;"></i>&nbsp;
-                        $250.00</h5>
-                </a>
-            </div>
+
+        <div id="CartButton">
+            <a href="Checkout.html" id="cart_icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
-        <div class="Profile"></div>
+
+        <div class="Profile">
+            <img src="pageImg/logo.png" alt="" id="logoProfile">
+        </div>
     </div>
 
-    <div id="SearchExpandedWrapper">
-        <div class="SearchExpanded animate__animated animate__fadeInLeft">
-            <h1>Our models</h1>
-            <h4>(Ones that are currently in stock)</h4>
-            <h2 id="CloseButton" onclick="closeSearchBar()">X</h2>
-        </div>
-        <div id="listDemo"></div>
-    </div>
 
     <div class="MainDiv">
         <!-- --------------------------------------------------------- -->
@@ -153,23 +136,44 @@
                 <div class="showSlider slide">
                     <img src="img/BANNERS/KD14BASKETBALLBANNER.jpg" alt="Entering Library"
                         class="BannerCollectionImagegs" />
-                    <div class="contentBook">Placeholder</div>
+                    <div class="contentBook">KD14 Basketball</div>
                 </div>
                 <div class="showSlider slide">
-                    <img src="img/niketanjuncollection.jpg" alt="Select Book" class="BannerCollectionImagegs" />
-                    <div class="contentBook">Placeholder2</div>
+                    <a href="allhtmlpages/AirForce1Crater.html"><img src="img/BANNERS/AirForce1CraterBanner.png"
+                            alt="Select Book" class="BannerCollectionImagegs" /></a>
+                    <div class="contentBook">Air Force 1 Crater</div>
                 </div>
                 <div class="showSlider slide">
-                    <img src="img/airmaxcollectionbanner.jpg" alt="Registering ID" class="BannerCollectionImagegs" />
-                    <div class="contentBook">Placeholder</div>
+                    <img src="img/BANNERS/AirVapormaxBlack.png" alt="Registering ID" class="BannerCollectionImagegs" />
+                    <div class="contentBook">Air Vapor Max (Black)</div>
                 </div>
                 <div class="showSlider slide">
-                    <img src="img/niketanjuncollection.jpg" alt="Returning Book" class="BannerCollectionImagegs" />
-                    <div class="contentBook">Placeholder</div>
+                    <img src="img/BANNERS/ManoaBanner.png" alt="Returning Book" class="BannerCollectionImagegs" />
+                    <div class="contentBook">Nike Manoa</div>
                 </div>
                 <!-- Navigation arrows -->
-                <a class="left" onclick="nextSlide(-1)" style="margin-left: -844px;">❮</a>
-                <a class="right" onclick="nextSlide(1)">❯</a>
+                <a class="left" onclick="nextSlide(-1)" style="cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;">❮</a>
+                <a class="right" onclick="nextSlide(1)" style="cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: black;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;">❯</a>
             </div>
         </div>
     </div>
@@ -212,9 +216,11 @@
                     </ul>
                 </div>
             </div>
-            
-            <h4 style="color: rgb(102, 102, 102); text-align: center; padding: 100px 0px 0px 0px; font-weight: 500; opacity: 0.5;"><i class="fa fa-copyright" aria-hidden="true"></i>
-                 Copyright Vũ Đức Minh. Do not
+
+            <h4
+                style="color: rgb(102, 102, 102); text-align: center; padding: 100px 0px 0px 0px; font-weight: 500; opacity: 0.5;">
+                <i class="fa fa-copyright" aria-hidden="true"></i>
+                Copyright Vũ Đức Minh. Do not
                 recreate.</h4>
         </div>
     </footer>

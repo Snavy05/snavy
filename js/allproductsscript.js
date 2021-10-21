@@ -1,3 +1,31 @@
+function openSearch() {
+    document.getElementById("SearchExpandedWrapper").style.display = "block";
+    document.getElementsByClassName("MainDiv")[0].style.filter = "blur(4px)";
+    document.getElementById("Footer").style.filter = "blur(4px)";
+}
+
+function closeSearchBar() {
+    document.getElementById("SearchExpandedWrapper").style.display = "none";
+    document.getElementsByClassName("MainDiv")[0].style.filter = "blur(0px)";
+}
+
+// -------------------------------------------------------------
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+    document.body.style.backgroundColor = "white";
+}
+
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 const listDemo = document.getElementById('listDemo');
 const searchBar = document.getElementById('SearchBar');
 const header = document.getElementById('header');
@@ -9,13 +37,13 @@ var arrDemo = [{
         price: '$200',
         class: 'animate__fadeIn',
         color: '#9bdc28;',
-        color1: '#9bdc28;',
-        color2: '#9bdc28;',
+        color1: 'white;',
+        color2: '#CAD51D;',
         page: 'allhtmlpages/AirForce1Crater.html',
     },
     {
         id: 2,
-        name: 'Air Force Black/White',
+        name: 'Air Force B&W',
         title: '2 Colors',
         img: './img/AirForceBlackAndWhite.png',
         price: '$250',
@@ -113,7 +141,7 @@ const displayEle = (arrDemo) => {
             <div class="container_1">
             <div class="card animate__animated ${item.class}">
                 <div class="imgBx">
-                    <img src="${item.img}" alt="">
+                    <img src="${item.img}" alt="" id="coverImg">
                 </div>
                 <div class="contentBx">
                     <h2>${item.name}</h2>
@@ -127,9 +155,8 @@ const displayEle = (arrDemo) => {
 
                     <div class="color">
                         <h3>Color: </h3>
-                        <span style="background-color: ${item.color};"></span>
-                        <span style="background-color: ${item.color1};"></span>
-                        <span style="background-color: ${item.color2};"></span>
+                        <span style="background-color: ${item.color1};" onclick="changeImgWhite()"></span>
+                        <span style="background-color: ${item.color2};" onclick="changeImgGreen()"></span>
                     </div>
                     <a href="${item.page}">Buy Now</a>
                 </div>
@@ -137,14 +164,6 @@ const displayEle = (arrDemo) => {
         </div>
     </div>
         `
-        // <div class='info animate__animated ${item.class}'>
-        //     <img src="${item.img}" alt="">    
-        //     <div class='SmallShoesInfo'>
-        //         <a href="${item.link}">${item.name}</a>
-        //         <p class='ShoesColor'>${item.title}</p>
-        //         <p class='ShoesPrice'>${item.price}</p>
-        //     </div>
-        // </div>
 
     })
     listDemo.innerHTML = htmldisplay.join("");
@@ -175,3 +194,13 @@ const displayHeader = () => {
 
 }
 displayHeader();
+
+function changeImgGreen() {
+    let coverPath = document.getElementById('coverImg');
+    coverPath.src = "./img/AirForce1CraterGreen.png"
+}
+
+function changeImgWhite() {
+    let coverPath = document.getElementById('coverImg');
+    coverPath.src = "./img/AirForce1CraterWhite.png"
+}

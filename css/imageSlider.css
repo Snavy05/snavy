@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0px;
+}
+
+#Angles,
+#main-image {
+    float: left;
+}
+
+ul li {
+    list-style: none;
+}
+
+ul li img {
+    width: 100px;
+    cursor: pointer;
+}
+
+#main-image {
+    width: 500px;
+}
+
+#main-image img {
+    width: 412px;
+    margin-top: 18px;
+    margin-left: 50px;
+}
+
+#Color {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    border: 1px solid black;
+}
+

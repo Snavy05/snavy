@@ -12,6 +12,7 @@ body {
 }
 
 .NavBar {
+    position: relative;
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
@@ -19,6 +20,7 @@ body {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 #SearchBar,
@@ -89,16 +91,19 @@ body {
 
 
 /* -------------------------------------------------------------- */
+
+
 .ShoesImage {
-    width: 95vh;
-    height: 70vh;
-    left: 10vh;
+    /* width: 95vh;
+    height: 70vh; */
+    width: 850px;
+    height: 1050px;
+    left: 5vh;
     margin: auto;
     position: absolute;
     right: 0;
     text-align: center;
-    top: 10vh;
-    
+    bottom: -3vh;
 }
 
 .MainDiv {
@@ -143,7 +148,7 @@ body {
     font-weight: 700;
 }
 
-.Reviews{
+.Reviews {
     display: flex;
 }
 
@@ -153,21 +158,19 @@ body {
 
 .ColorSelection {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
 }
 
-.Color{
+.Color {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    margin-left: -100px;
 }
 
 .Color:hover {
     border: 2px solid #CAD51D;
     cursor: pointer;
 }
+
 /* ------------------------------------------------------------- */
 .BottomDiv {
     display: flex;
@@ -176,182 +179,331 @@ body {
 }
 
 .cart-button {
-	position: relative;
-	padding: 10px;
-	width: 200px;
-	height: 60px;
-	border: 0;
-	border-radius: 30px;
-	background-color: #CAD51D;
-	outline: none;
-	cursor: pointer;
-	color: black;
-	transition: .3s ease-in-out;
-	overflow: hidden;
+    position: relative;
+    padding: 10px;
+    width: 200px;
+    height: 60px;
+    border: 0;
+    border-radius: 30px;
+    background-color: #CAD51D;
+    outline: none;
+    cursor: pointer;
+    color: black;
+    transition: .3s ease-in-out;
+    overflow: hidden;
     font-weight: 700;
 }
+
 .cart-button:hover {
-	background-color: #bac51c;
+    background-color: #bac51c;
 }
+
 .cart-button:active {
-	transform: scale(.9);
+    transform: scale(.9);
 }
 
 .cart-button .fa-shopping-cart {
-	position: absolute;
-	z-index: 2;
-	top: 50%;
-	left: -10%;
-	font-size: 2em;
-	transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: -10%;
+    font-size: 2em;
+    transform: translate(-50%, -50%);
 }
+
 .cart-button .fa-archive {
-	position: absolute;
-	z-index: 3;
-	top: -20%;
-	left: 52%;
-	font-size: 1.2em;
-	transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 3;
+    top: -20%;
+    left: 52%;
+    font-size: 1.2em;
+    transform: translate(-50%, -50%);
 }
+
 .cart-button span {
-	position: absolute;
-	z-index: 3;
-	left: 50%;
-	top: 50%;
-	font-size: 1.2em;
-	color: black;
-	transform: translate(-50%,-50%);
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    font-size: 1.2em;
+    color: black;
+    transform: translate(-50%, -50%);
 }
+
 .cart-button span.add-to-cart {
-	opacity: 1;
+    opacity: 1;
 }
+
 .cart-button span.added {
-	opacity: 0;
+    opacity: 0;
 }
 
 .cart-button.clicked .fa-shopping-cart {
-	animation: cart 1.5s ease-in-out forwards;
+    animation: cart 1.5s ease-in-out forwards;
 }
+
 .cart-button.clicked .fa-archive {
-	animation: box 1.5s ease-in-out forwards;
+    animation: box 1.5s ease-in-out forwards;
 }
+
 .cart-button.clicked span.add-to-cart {
-	animation: txt1 1.5s ease-in-out forwards;
+    animation: txt1 1.5s ease-in-out forwards;
 }
+
 .cart-button.clicked span.added {
-	animation: txt2 1.5s ease-in-out forwards;
+    animation: txt2 1.5s ease-in-out forwards;
 }
+
 @keyframes cart {
-	0% {
-		left: -10%;
-	}
-	40%, 60% {
-		left: 50%;
-	}
-	100% {
-		left: 110%;
-	}
+    0% {
+        left: -10%;
+    }
+
+    40%,
+    60% {
+        left: 50%;
+    }
+
+    100% {
+        left: 110%;
+    }
 }
+
 @keyframes box {
-	0%, 40% {
-		top: -20%;
-	}
-	60% {
-		top: 40%;
-		left: 52%;
-	}
-	100% {
-		top: 40%;
-		left: 112%;
-	}
+
+    0%,
+    40% {
+        top: -20%;
+    }
+
+    60% {
+        top: 40%;
+        left: 52%;
+    }
+
+    100% {
+        top: 40%;
+        left: 112%;
+    }
 }
+
 @keyframes txt1 {
-	0% {
-		opacity: 1;
-	}
-	20%, 100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+
+    20%,
+    100% {
+        opacity: 0;
+    }
 }
+
 @keyframes txt2 {
-	0%, 80% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+
+    0%,
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .LikeButton {
-    height:100px;
-    margin:0 auto;
+    height: 100px;
+    margin: 0 auto;
     position: relative;
-  }
-  
+}
+
 .IClass {
-    cursor:pointer;
-    padding:10px 12px 8px;
-    background:#fff;
-    border-radius:50%;
-    display:inline-block;
-    margin:0 0 15px;
-    color:#aaa;
-    transition:.2s;
-  }
-  
-  .IClass:hover {
-    color:#666;
-  }
-  
-  .IClass:before {
-    font-family:fontawesome;
-    content:'\f004';
-    font-style:normal;
-  }
-  
-  .TextPopup {
+    cursor: pointer;
+    padding: 10px 12px 8px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0 15px;
+    color: #aaa;
+    transition: .2s;
+}
+
+.IClass:hover {
+    color: #666;
+}
+
+.IClass:before {
+    font-family: fontawesome;
+    content: '\f004';
+    font-style: normal;
+}
+
+.TextPopup {
     position: absolute;
-    bottom:70px;
-    left:0;
-    right:0;
+    bottom: 70px;
+    left: 0;
+    right: 0;
     visibility: hidden;
-    transition:.6s;
-    z-index:-2;
-    font-size:2px;
-    color:transparent;
-    font-weight:400;
-  }
-  
-  .press {
+    transition: .6s;
+    z-index: -2;
+    font-size: 2px;
+    color: transparent;
+    font-weight: 400;
+}
+
+.press {
     animation: size .4s;
-    color:#e23b3b;
-  }
-  
-  .TextPopup.press {
-    bottom:120px;
-    font-size:14px;
-    visibility:visible;
+    color: #e23b3b;
+}
+
+.TextPopup.press {
+    bottom: 120px;
+    font-size: 14px;
+    visibility: visible;
     animation: fade 1s;
-  }
-  
-  @keyframes fade {
-    0% {color:transparent;}
-    50% {color:e23b3b;}
-    100% {color:transparent;}
-  }
-  
-  @keyframes size {
-    0% {padding:10px 12px 8px;}
-    50% {padding:14px 16px 12px;  
-      margin-top:-4px;}
-    100% {padding:10px 12px 8px;}
-  }
+}
+
+@keyframes fade {
+    0% {
+        color: transparent;
+    }
+
+    50% {
+        color: e23b3b;
+    }
+
+    100% {
+        color: transparent;
+    }
+}
+
+@keyframes size {
+    0% {
+        padding: 10px 12px 8px;
+    }
+
+    50% {
+        padding: 14px 16px 12px;
+        margin-top: -4px;
+    }
+
+    100% {
+        padding: 10px 12px 8px;
+    }
+}
+
+
+::selection {
+    color: #fff;
+    background: #664AFF;
+}
+
+.search-box {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, .2);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 1;
+}
+
+.search-box.active {
+    width: 350px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    background: #fff;
+    outline: none;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box input.active {
+    opacity: 1;
+}
+
+.search-box input::placeholder {
+    color: #a6a6a6;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60px;
+    width: 60px;
+    background: #252525;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    color: #CAD51D;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-icon:hover {
+    background: #313131;
+}
+
+.search-box .search-icon.active {
+    right: 5px;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    font-size: 20px;
+    background: #CAD51D;
+    color: black;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .cancel-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-box .cancel-icon.active {
+    right: -40px;
+    transform: translateY(-50%) rotate(360deg);
+}
+
+.search-box .search-data {
+    text-align: center;
+    padding-top: 7px;
+    color: #fff;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.search-box .search-data.active {
+    display: none;
+}
+
+#SearchBar {
+    width: 350px;
+    height: 65px;
+}
+
 
 
 
 /* --------------------------------- */
 
-.FunctionButtons{
+.FunctionButtons {
     display: flex;
     margin-right: 80px;
 }
@@ -366,11 +518,13 @@ body {
     padding: 0px 5px 0px 5px;
 }
 
-.fa-long-arrow-left, .fa-long-arrow-right {
+.fa-long-arrow-left,
+.fa-long-arrow-right {
     color: #6C6C6C;
 }
 
-.fa-long-arrow-left:hover, .fa-long-arrow-right:hover{
+.fa-long-arrow-left:hover,
+.fa-long-arrow-right:hover {
     color: #CAD51D;
     transition: 0.4s;
     cursor: pointer;
@@ -382,40 +536,97 @@ body {
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.sidenav a:nth-child(1) {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #CAD51D;
+    display: block;
+    padding: 0px 10px 20px 0px;
+    transition: 0.3s;
+}
+
+.sidenav a:nth-child(2),
+a:nth-child(3),
+a:nth-child(4),
+a:nth-child(5),
+a:nth-child(6) {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
+    border-radius: 10px;
+    width: 20vh;
+    height: 40px;
+    margin-left: 7px;
     transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
+}
+
+
+.sidenav a:hover:nth-child(2),
+a:hover:nth-child(3),
+a:hover:nth-child(4),
+a:hover:nth-child(5),
+a:hover:nth-child(6) {
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px #9b9a9a;
+}
+
+.sidenav a {
+    margin-top: 20px;
+}
+
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
+}
 
-  
+#one,
+#two,
+#three,
+#four {
+    width: 100px;
+    height: 90px;
+}
+
+#Angles {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+ul:hover,
+li:hover {
+    opacity: 1;
+}
+
+ul li img {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
